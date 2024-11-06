@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <title>JLWeather</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+</head>
+
+<body>
+    <h1>JLWeather</h1>
+    <script src="assets/javascript/app.js"> type="text/javascript"</script>
+
+    <div class="menu">
+        <button onclick="showCity('Stockholm')">Stockholm</button>
+        <button onclick="showCity('Kyiv')">Kyiv</button>
+        <button onclick="showCity('Damascus')">Damascus</button>
+        <button onclick="showCity('Manila')">Manila</button>
+        <button onclick="showCity('Baghdad')">Baghdad</button>
+        <button onclick="toggleComparison()">Jämför städer</button>
+    </div>
+
+    <div id="single-city-view" class="city-view"></div>
+
+    <div id="comparison-view" class="comparison-view" style="display: none;">
+        <div id="city1" class="city-box"></div>
+        <div id="city2" class="city-box"></div>
+    </div>
+
+</body>
+</html>
