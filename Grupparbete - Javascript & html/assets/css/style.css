@@ -37,6 +37,7 @@ footer {
 .main-item-1 {
     background-color: blue;
     grid-area: 1 / 1 / 7 / 7;
+    
 }
 .main-item-2 {
     background-color: orange;
