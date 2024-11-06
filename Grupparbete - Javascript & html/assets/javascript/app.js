@@ -12,7 +12,7 @@ async function checkWeatherManila(){
 document.querySelector(".cityManila").innerHTML = data.name;
 document.querySelector(".tempManila").innerHTML = Math.round(data.main.temp) + "°C";
 document.querySelector(".humidityManila").innerHTML = "Humidity: " + data.main.humidity + "%";
-document.querySelector(".windManila").innerHTML = "Wind: " + data.wind.speed + " km/h";
+document.querySelector(".windManila").innerHTML = "Wind speed: " + data.wind.speed + " km/h";
 
 }
 
@@ -25,7 +25,7 @@ async function checkWeatherStockholm(){
 document.querySelector(".cityStockholm").innerHTML = data.name;
 document.querySelector(".tempStockholm").innerHTML = Math.round(data.main.temp) + "°C";
 document.querySelector(".humidityStockholm").innerHTML = "Humidity: " + data.main.humidity + "%";
-document.querySelector(".windStockholm").innerHTML = "Wind: " + data.wind.speed + " km/h";
+document.querySelector(".windStockholm").innerHTML = "Wind speed: " + data.wind.speed + " km/h";
 
 }
 
@@ -38,7 +38,7 @@ async function checkWeatherKiev(){
 document.querySelector(".cityKiev").innerHTML = data.name;
 document.querySelector(".tempKiev").innerHTML = Math.round(data.main.temp) + "°C";
 document.querySelector(".humidityKiev").innerHTML = "Humidity: " + data.main.humidity + "%";
-document.querySelector(".windKiev").innerHTML = "Wind: " + data.wind.speed + " km/h";
+document.querySelector(".windKiev").innerHTML = "Wind speed: " + data.wind.speed + " km/h";
 
 }
 
@@ -51,7 +51,7 @@ async function checkWeatherDamaskus(){
 document.querySelector(".cityDamaskus").innerHTML = data.name;
 document.querySelector(".tempDamaskus").innerHTML = Math.round(data.main.temp) + "°C";
 document.querySelector(".humidityDamaskus").innerHTML = "Humidity: " + data.main.humidity + "%";
-document.querySelector(".windDamaskus").innerHTML = "Wind: " + data.wind.speed + " km/h";
+document.querySelector(".windDamaskus").innerHTML = "Wind speed: " + data.wind.speed + " km/h";
 
 }
 
