@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+    <title>JLWeather</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+</head>
+
+<body>
+    <div class="outer-container">
+        <header>
+
+            <h1>JLWeather</h1>
+
+            <div class="menu">
+                <button onclick="showCity('Stockholm')">Stockholm</button>
+                <button onclick="showCity('Kyiv')">Kyiv</button>
+                <button onclick="showCity('Damascus')">Damascus</button>
+                <button onclick="showCity('Manila')">Manila</button>
+                <button onclick="showCity('Baghdad')">Baghdad</button>
+                <button onclick="toggleComparison()">Jämför städer</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="main-item-1"><img style="width:50%;" src="https://www.eem.se/media/yw1phfwk/hos-oss-plock-inkastare-sol.jpg?width=1920&height=1080&format=webp&quality=80&v=1da0da7c8c600d0" /></div>
+
+    <div class="main-item-1"><img style="width:50%;" src="https://www.eem.se/media/yw1phfwk/hos-oss-plock-inkastare-sol.jpg?width=1920&height=1080&format=webp&quality=80&v=1da0da7c8c600d0" /></div>
+
+
+            <div id="single-city-view" class="city-view"></div>
+            <div id="comparison-view" class="comparison-view" style="display: none;">
+                <div id="city1" class="city-box"></div>
+                <div id="city2" class="city-box"></div>
+            </div>
+        </main>
+
+        <footer>
+            <h2> Theme:</h2>
+        </footer>
+    </div>
+</body>
+</html>
