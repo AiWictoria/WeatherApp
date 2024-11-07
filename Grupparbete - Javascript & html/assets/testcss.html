@@ -13,29 +13,69 @@
     <div class="outer-container">
         <header>
 
-            <h1>JLWeather</h1>
 
-            <div class="menu">
-                <button onclick="showCity('Stockholm')">Stockholm</button>
-                <button onclick="showCity('Kyiv')">Kyiv</button>
-                <button onclick="showCity('Damascus')">Damascus</button>
-                <button onclick="showCity('Manila')">Manila</button>
-                <button onclick="toggleComparison()">Jämför städer</button>
+            
+
+
+            <div class="d-flex flex-column mb-3">
+
+                <div class="d-flex justify-content-start">
+                    <img src="logo.png" class="logo-img">
+                    <h1>JLWeather</h1>
+                </div>
+                <div class="d-flex justify-content-evenly">
+                    <button onclick="showCity('Stockholm')">Stockholm</button>
+                    <button onclick="showCity('Kyiv')">Kyiv</button>
+                    <button onclick="showCity('Damascus')">Damascus</button>
+                    <button onclick="showCity('Manila')">Manila</button>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button onclick="toggleComparison()">Jämför städer</button>
+                </div>
             </div>
+
+
+
         </header>
 
         <main>
             <div class="inner-container">
                 <section class="main-item-1 weather-bgimg">
-                    <h2>Stockholm</h2>
-                    <h2>NOW</h2>
-                    <h2>17C</h2>
-                    <h3>Wind</h3>
-                    <h3>Humidity</h3>
+                    
+                    
+                    
+
+
+                    <div class="d-flex flex-column mb-3">
+                        <div class="p-2">
+                            <div class="d-flex justify-content-between">
+                                <h2>NOW</h2>
+                                <h2>Stockholm</h2>
+                            </div>
+                        </div>
+                        <div class="p-2">
+                            <div class="d-flex justify-content-start">
+                                <h2>17C</h2>
+                            </div>
+                        </div>
+                        <div class="p-2">
+                            <div class="d-flex justify-content-start">
+                                <h3>Wind: 12m/s</h3>
+                                <h3>Humidity: 21</h3>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
                 </section>
               
                 <section class="main-item-2">
-                    <h2>Week</h2>
+
+                    <div class="d-flex justify-content-center">
+                        <h2>Forcast</h2>
+                    </div>
 
                     <div class="d-flex">
                         <div class="p-2 flex-grow-1">Monday</div>
@@ -72,7 +112,7 @@
                         <div class="p-2">SOL HÄR</div>
                         <div class="p-2">TEMP HÄR</div>
                     </div>
-                 </section>
+                </section>
             </div>
         </main>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

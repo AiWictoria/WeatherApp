@@ -53,4 +53,7 @@ footer {
     background-size: contain; 
     background-repeat: no-repeat;
 }
+.logo-img {
+    max-width: 100px;
+}
 /*  grid-area: row-start / col-start / row-end / col-end;*/
