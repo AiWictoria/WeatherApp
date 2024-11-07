@@ -20,19 +20,20 @@
                 <button onclick="showCity('Kyiv')">Kyiv</button>
                 <button onclick="showCity('Damascus')">Damascus</button>
                 <button onclick="showCity('Manila')">Manila</button>
-                <button onclick="showCity('Baghdad')">Baghdad</button>
                 <button onclick="toggleComparison()">Jämför städer</button>
             </div>
         </header>
 
         <main>
             <div class="inner-container">
-                <div class="main-item-1">
+                <section class="main-item-1 weather-bgimg">
                     <h2>Stockholm</h2>
+                    <h2>NOW</h2>
                     <h2>17C</h2>
-
-                </div>
-
+                    <h3>Wind</h3>
+                    <h3>Humidity</h3>
+                </section>
+              
                 <section class="main-item-2">
                     <h2>Week</h2>
 
@@ -72,30 +73,6 @@
                         <div class="p-2">TEMP HÄR</div>
                     </div>
                  </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <div id="single-city-view" class="city-view"></div>
-
-
-                <div id="comparison-view" class="comparison-view" style="display: none;">
-                    <div id="city1" class="city-box"></div>
-                    <div id="city2" class="city-box"></div>
-                </div>
             </div>
         </main>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
