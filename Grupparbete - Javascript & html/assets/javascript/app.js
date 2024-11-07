@@ -41,5 +41,14 @@ async function checkWeatherManila(){
         document.querySelector(".dayforecast3Manila").innerHTML = day3;
         document.querySelector(".dayforecast4Manila").innerHTML = day4;
     }
-    
+
+    async function checkWeatherStockholm(){
+        const response = await fetch(apiUrlStockholm);
+        
+        
+        var data = await response.json();
+        
+        console.log(data);
+    }
+
 checkWeatherManila();
