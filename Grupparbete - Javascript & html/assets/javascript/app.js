@@ -1,4 +1,7 @@
 const apiUrlManila = "http://api.weatherapi.com/v1/forecast.json?key=70923cd2adb646fc90190851240711&q=Manila&days=5&aqi=no&alerts=no";
+const apiIrlStockholm = "http://api.weatherapi.com/v1/forecast.json?key=70923cd2adb646fc90190851240711&q=Stockholm&days=5&aqi=no&alerts=no";
+const apiUrlKyiv = "http://api.weatherapi.com/v1/forecast.json?key=70923cd2adb646fc90190851240711&q=Kyiv&days=5&aqi=no&alerts=no";
+const apiUrlDamascus = "http://api.weatherapi.com/v1/forecast.json?key=70923cd2adb646fc90190851240711&q=Damascus&days=5&aqi=no&alerts=no";
 
 async function checkWeatherManila(){
         const response = await fetch(apiUrlManila);
