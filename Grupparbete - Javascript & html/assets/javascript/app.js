@@ -65,16 +65,24 @@ const apiUrlManila = "http://api.weatherapi.com/v1/forecast.json?key=70923cd2adb
 
 async function checkWeatherManila(){
         const response = await fetch(apiUrlManila);
+        
+        
         var data = await response.json();
-    
+        
         console.log(data);
+        
+        document.querySelector(".cityManila").innerHTML = data.location.name;
+        document.querySelector(".tempManila").innerHTML = Math.round(data.current.temp_c) + "°C";
+        document.querySelector(".humidityManila").innerHTML = "Humidity: " + data.current.humidity + "%";
+        document.querySelector(".windManila").innerHTML = "Wind speed: " + data.current.wind_kph + " km/h";
+        document.querySelector(".mintempforecast1Manila").innerHTML = Math.round(data.forecast.forecastday[1].day.mintemp_c) + "°C";
+        document.querySelector(".maxtempforecast1Manila").innerHTML = Math.round(data.forecast.forecastday[1].day.maxtemp_c) + "°C";
+        
+        const weekday = ["Söndag", "Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag"];
     
-    document.querySelector(".cityManila").innerHTML = data.location.name;
-    document.querySelector(".tempManila").innerHTML = Math.round(data.current.temp_c) + "°C";
-    document.querySelector(".humidityManila").innerHTML = "Humidity: " + data.current.humidity + "%";
-    document.querySelector(".windManila").innerHTML = "Wind speed: " + data.current.wind_kph + " km/h";
-    // document.querySelector(".");
-    document.querySelector(".tempforecastManila").innerHTML = Math.round(data.forecast.forecastday[1].hour[12].temp_c) + "°C";
-}
-
+        const d = new Date(data.forecast.forecastday[1].date);
+        let day = weekday[d.getDay()];
+        document.querySelector(".dayforecast1Manila").innerHTML = day;
+    }
+    
 checkWeatherManila();
