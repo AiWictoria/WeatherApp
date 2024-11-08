@@ -2,6 +2,34 @@
     --dark-color: #22264E;
     --darker-color: #7A8ABF;
 }
+.darkmode {
+    --dark-color: #000000;
+    --darker-color: #22264E;
+}
+
+#theme-switch {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--dark-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#theme-switch svg {
+    fill: var(--darker-color);
+}
+#theme-switch svg:last-child {
+    display: none;
+
+}
+.darkmode #theme-switch svg:first-child{
+    display: none;
+}
+.darkmode #theme-switch svg:last-child {
+    display: block;
+}
 
 * {
     box-sizing: border-box;
