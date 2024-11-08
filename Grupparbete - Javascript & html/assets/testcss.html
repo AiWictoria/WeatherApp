@@ -12,16 +12,16 @@
         function landChange() {
 
             if (document.getElementById('2lands').checked) {
-                document.getElementsByClassName('land-1')[0].className = 'land-1 compare temp-box';
-                document.getElementsByClassName('land-2')[0].className = 'land-2 compare temp-box';
-                document.getElementsByClassName('forcast-land-1')[0].className = 'forcast-land-1 compare temp-box';
-                document.getElementsByClassName('forcast-land-2')[0].className = 'forcast-land-2 compare temp-box';
+                document.getElementsByClassName('land-1')[0].className = 'land-1 compare land-box compare';
+                document.getElementsByClassName('land-2')[0].className = 'land-2 compare land-box compare';
+                document.getElementsByClassName('forcast-land-1')[0].className = 'forcast-land-1 compare forcast-box compare';
+                document.getElementsByClassName('forcast-land-2')[0].className = 'forcast-land-2 compare forcast-box compare';
             } else {
 
-                document.getElementsByClassName('land-1')[0].className = 'land-1 temp-box';
-                document.getElementsByClassName('land-2')[0].className = 'land-2 temp-box';
-                document.getElementsByClassName('forcast-land-1')[0].className = 'forcast-land-1';
-                document.getElementsByClassName('forcast-land-2')[0].className = 'forcast-land-2';
+                document.getElementsByClassName('land-1')[0].className = 'land-1 land-box';
+                document.getElementsByClassName('land-2')[0].className = 'land-2 land-box';
+                document.getElementsByClassName('forcast-land-1')[0].className = 'forcast-land-1 forcast-box';
+                document.getElementsByClassName('forcast-land-2')[0].className = 'forcast-land-2 forcast-box';
 
             }
 
@@ -66,7 +66,7 @@
 
         <main>
             <div class="inner-container">
-                    <section class="land-1 temp-box">
+                    <section class="land-1 land-box">
 
 
                             <div class="d-flex flex-column mb-3 ">
@@ -91,7 +91,7 @@
                     </section>
              
 
-                <section class="forcast-land-1">
+                <section class="forcast-land-1 forcast-box">
 
                     <div class="d-flex justify-content-center">
                         <h2>Forcast</h2>
@@ -119,7 +119,7 @@
                     </div>
                 </section>
 
-                <section class="land-2 temp-box">
+                <section class="land-2 land-box">
 
 
 
@@ -149,7 +149,7 @@
 
 
                 </section>
-                <section class="forcast-land-2">
+                <section class="forcast-land-2 forcast-box">
 
                     <div class="d-flex justify-content-center">
                         <h2>Forcast</h2>
