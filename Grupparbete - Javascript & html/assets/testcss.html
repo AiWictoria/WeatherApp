@@ -12,14 +12,14 @@
         function landChange() {
 
             if (document.getElementById('2lands').checked) {
-                document.getElementsByClassName('land-1')[0].className = 'land-1 compare';
-                document.getElementsByClassName('land-2')[0].className = 'land-2 compare';
-                document.getElementsByClassName('forcast-land-1')[0].className = 'forcast-land-1 compare';
-                document.getElementsByClassName('forcast-land-2')[0].className = 'forcast-land-2 compare';
+                document.getElementsByClassName('land-1')[0].className = 'land-1 compare temp-box';
+                document.getElementsByClassName('land-2')[0].className = 'land-2 compare temp-box';
+                document.getElementsByClassName('forcast-land-1')[0].className = 'forcast-land-1 compare temp-box';
+                document.getElementsByClassName('forcast-land-2')[0].className = 'forcast-land-2 compare temp-box';
             } else {
 
-                document.getElementsByClassName('land-1')[0].className = 'land-1';
-                document.getElementsByClassName('land-2')[0].className = 'land-2';
+                document.getElementsByClassName('land-1')[0].className = 'land-1 temp-box';
+                document.getElementsByClassName('land-2')[0].className = 'land-2 temp-box';
                 document.getElementsByClassName('forcast-land-1')[0].className = 'forcast-land-1';
                 document.getElementsByClassName('forcast-land-2')[0].className = 'forcast-land-2';
 
@@ -66,31 +66,28 @@
 
         <main>
             <div class="inner-container">
-                    <section class="land-1">
+                    <section class="land-1 temp-box">
 
 
-
-
-
-                        <div class="d-flex flex-column mb-3">
-                            <div class="p-2">
-                                <div class="d-flex justify-content-between">
-                                    <h2>NOW</h2>
-                                    <h2>Stockholm</h2>
+                            <div class="d-flex flex-column mb-3 ">
+                                <div class="p-2">
+                                    <div class="d-flex justify-content-between">
+                                        <h2>NOW</h2>
+                                    </div>
+                                </div>
+                                <div class="p-2">
+                                    <div class="d-flex justify-content-start">
+                                        <h2>17C</h2>
+                                    </div>
+                                </div>
+                                <div class="p-2">
+                                    <div class="d-flex justify-content-start">
+                                        <h3>Wind: 12m/s</h3>
+                                        <h3>Humidity: 21</h3>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="p-2">
-                                <div class="d-flex justify-content-start">
-                                    <h2>17C</h2>
-                                </div>
-                            </div>
-                            <div class="p-2">
-                                <div class="d-flex justify-content-start">
-                                    <h3>Wind: 12m/s</h3>
-                                    <h3>Humidity: 21</h3>
-                                </div>
-                            </div>
-                        </div>
+                       
                     </section>
              
 
@@ -122,7 +119,7 @@
                     </div>
                 </section>
 
-                <section class="land-2 ">
+                <section class="land-2 temp-box">
 
 
 
