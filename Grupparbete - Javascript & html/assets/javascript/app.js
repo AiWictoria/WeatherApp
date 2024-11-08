@@ -54,6 +54,14 @@ async function checkWeatherManila(){
         document.querySelector(".tempStockholm").innerHTML = Math.round(data.current.temp_c) + "°C";
         document.querySelector(".humidityStockholm").innerHTML = "Humidity: " + data.current.humidity + "%";
         document.querySelector(".windStockholm").innerHTML = "Wind speed: " + data.current.wind_kph + " km/h";
+        document.querySelector(".mintempforecast1Stockholm").innerHTML = Math.round(data.forecast.forecastday[1].day.mintemp_c) + "°C";
+        document.querySelector(".maxtempforecast1Stockholm").innerHTML = Math.round(data.forecast.forecastday[1].day.maxtemp_c) + "°C";
+        document.querySelector(".mintempforecast2Stockholm").innerHTML = Math.round(data.forecast.forecastday[2].day.mintemp_c) + "°C";
+        document.querySelector(".maxtempforecast2Stockholm").innerHTML = Math.round(data.forecast.forecastday[2].day.maxtemp_c) + "°C";
+        document.querySelector(".mintempforecast3Stockholm").innerHTML = Math.round(data.forecast.forecastday[3].day.mintemp_c) + "°C";
+        document.querySelector(".maxtempforecast3Stockholm").innerHTML = Math.round(data.forecast.forecastday[3].day.maxtemp_c) + "°C";
+        document.querySelector(".mintempforecast4Stockholm").innerHTML = Math.round(data.forecast.forecastday[4].day.mintemp_c) + "°C";
+        document.querySelector(".maxtempforecast4Stockholm").innerHTML = Math.round(data.forecast.forecastday[4].day.maxtemp_c) + "°C";
     }
 
 checkWeatherManila();
