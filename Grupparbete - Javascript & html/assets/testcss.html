@@ -2,101 +2,67 @@
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JLWeather</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-
     <script>
         function landChange() {
-
             if (document.getElementById('2lands').checked) {
                 document.getElementsByClassName('land-1')[0].className = 'land-1 compare land-box compare';
                 document.getElementsByClassName('land-2')[0].className = 'land-2 compare land-box compare';
                 document.getElementsByClassName('forcast-land-1')[0].className = 'forcast-land-1 compare forcast-box compare';
                 document.getElementsByClassName('forcast-land-2')[0].className = 'forcast-land-2 compare forcast-box compare';
             } else {
-
                 document.getElementsByClassName('land-1')[0].className = 'land-1 land-box';
                 document.getElementsByClassName('land-2')[0].className = 'land-2 land-box';
                 document.getElementsByClassName('forcast-land-1')[0].className = 'forcast-land-1 forcast-box';
                 document.getElementsByClassName('forcast-land-2')[0].className = 'forcast-land-2 forcast-box';
-
             }
         }
-   
-
     </script>
-    <script type="text/javascript" src="darkmode.js" defer></script>
+    <script src="darkmode.js" defer></script>
 </head>
-
 <body>
     <div class="outer-container">
         <div class="header-bgimg">
             <header>
-
-
-                
-
-
-
-
-
-
-
                 <div class="d-flex flex-column mb-3">
-
-
                     <div class="d-flex justify-content-around">
-                        <button class="button-73" role="button">Stockholm</button>
-                        <button class="button-73" role="button">Kyiv</button>
-                        <button class="button-73" role="button">Damascus</button>
-                        <button class="button-73" role="button">Manila</button>
-                        </div>
-                    <!--  <div class="d-flex justify-content-center">
-            <button class="button-64" role="button"><span class="text">Jämför städer</span></button>
-        </div> -->
+                        <button class="menu-button">Stockholm</button>
+                        <button class="menu-button">Kyiv</button>
+                        <button class="menu-button">Damascus</button>
+                        <button class="menu-button">Manila</button>
+                    </div>
                 </div>
-
-
-
             </header>
         </div>
-
         <main>
             <div class="inner-container">
-                    <section class="land-1 land-box">
-
-
-                            <div class="d-flex flex-column mb-3 ">
-                                <div class="p-2">
-                                    <div class="d-flex justify-content-between">
-                                        <h2>NOW</h2>
-                                    </div>
-                                </div>
-                                <div class="p-2">
-                                    <div class="d-flex justify-content-start">
-                                        <h2>17C</h2>
-                                    </div>
-                                </div>
-                                <div class="p-2">
-                                    <div class="d-flex justify-content-start">
-                                        <h3>Wind: 12m/s</h3>
-                                        <h3>Humidity: 21</h3>
-                                    </div>
-                                </div>
+                <section class="land-1 land-box">
+                    <div class="d-flex flex-column mb-3 ">
+                        <div class="p-2">
+                            <div class="d-flex justify-content-between">
+                                <h2>NOW</h2>
                             </div>
-                       
-                    </section>
-             
-
+                        </div>
+                        <div class="p-2">
+                            <div class="d-flex justify-content-start">
+                                <h2>17C</h2>
+                            </div>
+                        </div>
+                        <div class="p-2">
+                            <div class="d-flex justify-content-start">
+                                <h3>Wind: 12m/s</h3>
+                                <h3>Humidity: 21</h3>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <section class="forcast-land-1 forcast-box">
-
                     <div class="d-flex justify-content-center">
                         <h2>Forcast</h2>
                     </div>
-
                     <div class="d-flex">
                         <div class="p-2 flex-grow-1">Monday</div>
                         <div class="p-2">SOL HÄR</div>
@@ -118,13 +84,7 @@
                         <div class="p-2">TEMP HÄR</div>
                     </div>
                 </section>
-
                 <section class="land-2 land-box">
-
-
-
-
-
                     <div class="d-flex flex-column mb-3">
                         <div class="p-2">
                             <div class="d-flex justify-content-between">
@@ -144,17 +104,11 @@
                             </div>
                         </div>
                     </div>
-
-
-
-
                 </section>
                 <section class="forcast-land-2 forcast-box">
-
                     <div class="d-flex justify-content-center">
                         <h2>Forcast</h2>
                     </div>
-
                     <div class="d-flex">
                         <div class="p-2 flex-grow-1">Monday</div>
                         <div class="p-2">SOL HÄR</div>
@@ -179,14 +133,12 @@
             </div>
         </main>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
         <footer>
             <button id="theme-switch">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M484-80q-84 0-157.5-32t-128-86.5Q144-253 112-326.5T80-484q0-130.67 75.67-236 75.66-105.33 200-146 18.66-6 34.33 5.17 15.67 11.16 14 30.16-5.67 87 24.67 167 30.33 80 92.33 142T663.33-429q80.34 30.67 167.34 25 20-1.67 30.5 14.5t4.5 35.17Q824.33-231 719.5-155.5 614.67-80 484-80Zm0-66.67q96 0 175.67-52.66Q739.33-252 787-336.33q-88.67-8-169.67-42.17-81-34.17-143.66-96.5Q411-537.33 377-618t-41.67-168.67q-84.33 46.34-136.5 126.5Q146.67-580 146.67-484q0 140.56 98.39 238.94 98.38 98.39 238.94 98.39ZM473.33-475Z" /></svg>
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M479.88-766.67q-14.21 0-23.71-9.58t-9.5-23.75v-86.67q0-14.16 9.61-23.75 9.62-9.58 23.84-9.58 14.21 0 23.71 9.58 9.5 9.59 9.5 23.75V-800q0 14.17-9.61 23.75-9.62 9.58-23.84 9.58Zm202.79 84Q673-692.33 673-705.9t9.67-23.43L743.33-791q10.05-10 23.86-10Q781-801 791-791q9.67 9.67 9.67 23.33 0 13.67-9.67 23.34l-61.67 61.66Q719.67-673 706-673q-13.67 0-23.33-9.67Zm117.33 236q-14.17 0-23.75-9.61-9.58-9.62-9.58-23.84 0-14.21 9.58-23.71t23.75-9.5h86.67q14.16 0 23.75 9.61 9.58 9.62 9.58 23.84 0 14.21-9.58 23.71-9.59 9.5-23.75 9.5H800ZM479.88-40q-14.21 0-23.71-9.58-9.5-9.59-9.5-23.75V-160q0-14.17 9.61-23.75 9.62-9.58 23.84-9.58 14.21 0 23.71 9.58t9.5 23.75v86.67q0 14.16-9.61 23.75Q494.1-40 479.88-40ZM230.67-682.67 169-743.33q-10-9.92-10-23.96 0-14.04 10.26-23.71 9.41-9.67 23.07-9.67 13.67 0 23.34 9.67l61.66 61.67Q287-719.67 287-706q0 13.67-9.67 23.33-10.18 9-23.75 9-13.58 0-22.91-9ZM744-169l-61.33-61.67Q673-240.53 673-254.1t9.67-23.23q9.16-9 22.91-9t23.75 9l62.34 60.66q10 9.67 9.58 23.74-.41 14.07-9.51 24-9.94 9.93-24 9.93-14.07 0-23.74-10ZM73.33-446.67q-14.16 0-23.75-9.61Q40-465.9 40-480.12q0-14.21 9.58-23.71 9.59-9.5 23.75-9.5H160q14.17 0 23.75 9.61 9.58 9.62 9.58 23.84 0 14.21-9.58 23.71t-23.75 9.5H73.33ZM169-169.26q-9.67-9.41-9.67-23.07 0-13.67 9.67-23.34l61.67-61.66q9.16-9 22.91-9t23.75 9.16q10 10 10 23.75t-10 23.75L216.67-169q-9.92 10-23.96 10-14.04 0-23.71-10.26ZM480-240q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm0-66.67q72 0 122.67-50.66Q653.33-408 653.33-480t-50.66-122.67Q552-653.33 480-653.33t-122.67 50.66Q306.67-552 306.67-480t50.66 122.67Q408-306.67 480-306.67ZM480-480Z" /></svg>
             </button>
             <input type="checkbox" id="2lands" onchange="landChange()"> Checked = 2 Länder
-
         </footer>
     </div>
 </body>
