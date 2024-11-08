@@ -49,6 +49,12 @@ async function checkWeatherManila(){
         var data = await response.json();
         
         console.log(data);
+        
+        document.querySelector(".cityStockholm").innerHTML = data.location.name;
+        document.querySelector(".tempStockholm").innerHTML = Math.round(data.current.temp_c) + "°C";
+        document.querySelector(".humidityStockholm").innerHTML = "Humidity: " + data.current.humidity + "%";
+        document.querySelector(".windStockholm").innerHTML = "Wind speed: " + data.current.wind_kph + " km/h";
     }
 
 checkWeatherManila();
+checkWeatherStockholm()
