@@ -17,10 +17,15 @@ body {
 }
 header {
     grid-area: header;
-    background-color: red;
+    background: white;
+    background-image: url(../logo.png);
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 main {
+    background: linear-gradient(to bottom, #b2acbd, #ebd3cb, #fff2e2);
     grid-area: main;
 }
 .inner-container {
@@ -31,16 +36,16 @@ main {
 }
 footer {
     grid-area: footer;
-    background-color: green;
+    background-color: #ebd3cb;
+    border-top: solid 4px #7c7698;
 }
 
 .main-item-1 {
-    background-color: blue;
+    
     grid-area: 1 / 1 / 3 / 2;
-    z-index: 0;
 }
 .main-item-2 {
-    background-color: orange;
+    background-color: #b2acbd;
     grid-area: 1 / 2 / 3 / 3;
     display: flex;
     flex-direction: column;
@@ -53,7 +58,70 @@ footer {
     background-size: contain; 
     background-repeat: no-repeat;
 }
-.logo-img {
-    max-width: 100px;
+
+h1 {
+    text-align: end;
+    padding: 50px;
+    
+
 }
-/*  grid-area: row-start / col-start / row-end / col-end;*/
+
+.button-64 {
+    align-items: center;
+    background: linear-gradient(144deg, #A4D5F1, #AF40FF 50%, #D9E1F9);
+    border: 0;
+    border-radius: 10px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    color: #fff2e2;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    line-height: 0.5em;
+    padding: 5px;
+    touch-action: manipulation;
+    cursor: pointer;
+    font-weight: 500;
+    width: 200px;
+    height: 50px;
+}
+
+    .button-64:active,
+    .button-64:hover {
+        outline: 0;
+    }
+
+    .button-64 span {
+        background: #38204c;
+        /* background: linear-gradient(144deg, #AF40FF, #A4D5F1 50%, #AF40FF);*/
+        padding: 16px 24px;
+        border-radius: 6px;
+        width: 100%;
+        height: 100%;
+        transition: 200ms;
+    }
+    .button-64:hover span {
+        background: none;
+    }
+
+
+
+
+
+
+
+
+/*  grid-area: row-start / col-start / row-end / col-end;
+    colors: #38204c Mörklila
+            #7c7698 Mellan lila
+            #b2acbd ljus lila
+            #ebd3cb Beige
+            #fff2e2 Ljus beige
+
+    #363B6F svart
+    #c5c9fe lila
+    #7A8ABF vinter blå
+    #A4D5F1 ljusblå
+    #D9E1F9 lavendel
+
+        lila: #AF40FF
+*/
