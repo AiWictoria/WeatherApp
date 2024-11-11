@@ -148,7 +148,9 @@ footer {
     padding: 1rem 1.3rem;
     text-align: center;
     transition: all .15s;
-    width: 150px;
+    width: 10rem;
+    text-transform: uppercase;
+    font-weight: 650;
 }
 
     .menu-button:hover, .menu-button:active {
@@ -189,6 +191,9 @@ footer {
 
 .darkmode #theme-switch svg:last-child {
     display: block;
+}
+#theme-switch svg:hover {
+    fill: var(--shadow-bg);
 }
 
 .darkmode {
@@ -316,5 +321,8 @@ footer {
     .compare-switch svg {
         fill: var(--beige-color);
     }
+        .compare-switch svg:hover {
+            fill: var(--shadow-bg);
+        }
 
 /**********************************************************************************************************/
