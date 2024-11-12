@@ -102,6 +102,23 @@ async function checkWeatherManila(){
         document.querySelector(".mintempforecast4Kyiv").innerHTML = Math.round(data.forecast.forecastday[4].day.mintemp_c) + "°C";
         document.querySelector(".maxtempforecast4Kyiv").innerHTML = Math.round(data.forecast.forecastday[4].day.maxtemp_c) + "°C";
 
+        const weekday = ["Söndag", "Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag"];
+    
+        const d1 = new Date(data.forecast.forecastday[1].date);
+        const d2 = new Date(data.forecast.forecastday[2].date);
+        const d3 = new Date(data.forecast.forecastday[3].date);
+        const d4 = new Date(data.forecast.forecastday[4].date);
+
+        let day1 = weekday[d1.getDay()];
+        let day2 = weekday[d2.getDay()];
+        let day3 = weekday[d3.getDay()];
+        let day4 = weekday[d4.getDay()];
+
+        document.querySelector(".dayforecast1Kyiv").innerHTML = day1;
+        document.querySelector(".dayforecast2Kyiv").innerHTML = day2;
+        document.querySelector(".dayforecast3Kyiv").innerHTML = day3;
+        document.querySelector(".dayforecast4SKyiv").innerHTML = day4;
+
     }
 
     async function checkWeatherDamascus(){
@@ -125,6 +142,9 @@ async function checkWeatherManila(){
         document.querySelector(".mintempforecast4Damascus").innerHTML = Math.round(data.forecast.forecastday[4].day.mintemp_c) + "°C";
         document.querySelector(".maxtempforecast4Damascus").innerHTML = Math.round(data.forecast.forecastday[4].day.maxtemp_c) + "°C";
     }
+
+
+
 checkWeatherDamascus();
 checkWeatherKyiv();
 checkWeatherManila();
