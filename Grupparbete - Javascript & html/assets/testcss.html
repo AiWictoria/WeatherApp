@@ -16,12 +16,14 @@
             <header>
                 <div class="d-flex flex-column mb-3">
                     <div class="d-flex justify-content-around">
-                        <button class="menu-button">Stockholm</button>
-                        <button class="menu-button">Kyiv</button>
-                        <button class="menu-button">Damascus</button>
-                        <button class="menu-button">Manila</button>
+                        <button onclick="getWeather('stockholm', 'temp-div1','city-div1','weather-info1')" class="menu-button">Stockholm</button>
+                        <button onclick="getWeather('kyiv', 'temp-div1', 'city-div1','weather-info1')" class="menu-button">Kyiv</button>
+                        <button onclick="getWeather('damascus', 'temp-div1', 'city-div1','weather-info1')" class="menu-button">Damascus</button>
+                        <button onclick="getWeather('manila','temp-div1', 'city-div1','weather-info1')" class="menu-button">Manila</button>
                     </div>
                 </div>
+                <script src="javascript/app.js"></script>
+
             </header>
         </div>
         <main>
@@ -29,95 +31,54 @@
                 <section class="land-1 land-box">
                     <div class="d-flex justify-content-between">
                         <div class="d-flex flex-column mb-3 degree-box ">
-                            <div>
-                                <h3>NOW</h3>
-                            </div>
-                            <div>
-                                <h2>17°C</h2>
+                            <div class="d-flex flex-row mb-3">
+                                <div id="temp-div1"></div>
+
                             </div>
                             <div class="d-flex justify-content-start">
-                                <h4>Wind: 12m/s</h4>
-                                <h4>Humidity: 21</h4>
+                                <div id="weather-info1"></div>
                             </div>
                         </div>
                         <div class="city-font">
-                            <h2>Stockholm</h2>
+                            <div id="city-div1"></div>
+
+                            <img id="weather-icon" alt="Weather Icon">
                         </div>
                     </div>
                 </section>
                 <section class="forcast-land-1 forcast-box">
-                    <div class="d-flex justify-content-center">
-                        <h2>Forcast</h2>
-                    </div>
-                    <div class="d-flex">
-                        <div class="flex-grow-1"><h3>Monday</h3></div>
-                        <div class="forcast-item">SOL HÄR</div>
-                        <div class="forcast-item">TEMP HÄR</div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="flex-grow-1"><h3>Tuesday</h3></div>
-                        <div class="forcast-item">SOL HÄR</div>
-                        <div class="forcast-item">TEMP HÄR</div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="flex-grow-1"><h3>Wednesday</h3></div>
-                        <div class="forcast-item">SOL HÄR</div>
-                        <div class="forcast-item">TEMP HÄR</div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="flex-grow-1"><h3>Thursday</h3></div>
-                        <div class="forcast-item">SOL HÄR</div>
-                        <div class="forcast-item">TEMP HÄR</div>
-                    </div>
+                  <div id="hourly-forecast"></div>
                 </section>
                 <section class="land-2 land-box">
                     <div class="d-flex justify-content-between">
                         <div class="d-flex flex-column mb-3 degree-box ">
-                            <div>
-                                <h3>NOW</h3>
-                            </div>
-                            <div>
-                                <h2>17°C</h2>
+                            <div class="d-flex flex-row mb-3">
+                                <div id="temp-div2"></div>
+                                <select name="city" onchange="getWeather(this.value, 'temp-div2', 'city-div2', 'weather-info2')">
+                                    <option value="stockholm">Stockholm</option>
+                                    <option value="kyiv">Kyiv</option>
+                                    <option value="damascus">Damascus</option>
+                                    <option value="manila">Manila</option>
+                                </select>
                             </div>
                             <div class="d-flex justify-content-start">
-                                <h4>Wind: 12m/s</h4>
-                                <h4>Humidity: 21</h4>
+                                <div id="weather-info2"></div>
                             </div>
                         </div>
                         <div class="city-font">
-                            <h2>Stockholm</h2>
+                            <div id="city-div2"></div>
+
+                            <img id="weather-icon" alt="Weather Icon">
                         </div>
                     </div>
                 </section>
                 <section class="forcast-land-2 forcast-box">
-                    <div class="d-flex justify-content-center">
-                        <h2>Forcast</h2>
-                    </div>
-                    <div class="d-flex">
-                        <div class="flex-grow-1"><h3>Monday</h3></div>
-                        <div class="forcast-item">SOL HÄR</div>
-                        <div class="forcast-item">TEMP HÄR</div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="flex-grow-1"><h3>Tuesday</h3></div>
-                        <div class="forcast-item">SOL HÄR</div>
-                        <div class="forcast-item">TEMP HÄR</div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="flex-grow-1"><h3>Wednesday</h3></div>
-                        <div class="forcast-item">SOL HÄR</div>
-                        <div class="forcast-item">TEMP HÄR</div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="flex-grow-1"><h3>Thursday</h3></div>
-                        <div class="forcast-item">SOL HÄR</div>
-                        <div class="forcast-item">TEMP HÄR</div>
-                    </div>
+                    <div id="hourly-forecast"></div>
                 </section>
             </div>
         </main>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <footer>
+        <footer class="d-flex justify-content-between">
             <button id="theme-switch">
                 <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960"><path d="M479.96-116.41q-151.48 0-257.51-106.04-106.04-106.03-106.04-257.51 0-151.47 106.05-257.67Q328.51-843.83 480-843.83q13.28 0 26.3.88 13.03.88 25.55 2.88-38.13 29.96-61.08 75.15-22.94 45.18-22.94 97.27 0 91.69 64.32 155.88 64.33 64.18 156.22 64.18 52.61 0 97.41-22.82 44.81-22.83 74.52-60.96 1.77 12.52 2.65 25.23.88 12.72.88 25.9 0 151.44-106.2 257.63-106.2 106.2-257.67 106.2Z" /></svg>
                 <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM205.5-434.5h-171v-91h171v91Zm720 0h-171v-91h171v91Zm-491-320v-171h91v171h-91Zm0 720v-171h91v171h-91ZM255.76-641.87 147.35-746.52l64.41-67.13 104.13 107.17-60.13 64.61Zm492.48 495.52L643.11-254.52 704-317.65l108.65 104.17-64.41 67.13ZM642.35-704l104.17-108.65 67.13 64.41-107.17 104.13L642.35-704Zm-496 492.24 108.17-105.13L317.65-256 213.48-147.35l-67.13-64.41Z" /></svg>
@@ -129,3 +90,4 @@
     </div>
 </body>
 </html>
+
