@@ -8,39 +8,106 @@
     <script src="../javascript/app.js"></script>
 </head>
 <body>
-    <h2 class="cityManila"></h2>
-    <h1 class="tempManila"></h1>
-    <p class="humidityManila"></p>
-    <p class="windManila"></p>
-    <p class="dayforecast1Manila"></p>
-    <p class="maxtempforecast1Manila"></p>
-    <p class="mintempforecast1Manila"></p>
-    <p class="dayforecast2Manila"></p>
-    <p class="maxtempforecast2Manila"></p>
-    <p class="mintempforecast2Manila"></p>
-    <p class="dayforecast3Manila"></p>
-    <p class="maxtempforecast3Manila"></p>
-    <p class="mintempforecast3Manila"></p>
-    <p class="dayforecast4Manila"></p>
-    <p class="maxtempforecast4Manila"></p>
-    <p class="mintempforecast4Manila"></p>
 
-    <h2 class="cityStockholm"></h2>
-    <h1 class="tempStockholm"></h1>
-    <p class="humidityStockholm"></p>
-    <p class="windStockholm"></p>
-    <p class="dayforecast1Stockholm"></p>
-    <p class="maxtempforecast1Stockholm"></p>
-    <p class="mintempforecast1Stockholm"></p>
-    <p class="dayforecast2Stockholm"></p>
-    <p class="maxtempforecast2Stockholm"></p>
-    <p class="mintempforecast2Stockholm"></p>
-    <p class="dayforecast3Stockholm"></p>
-    <p class="maxtempforecast3Stockholm"></p>
-    <p class="mintempforecast3Stockholm"></p>
-    <p class="dayforecast4Stockholm"></p>
-    <p class="maxtempforecast4Stockholm"></p>
-    <p class="mintempforecast4Stockholm"></p>
+    <h2 class="cityManila" id="city"></h2>
+    <h1 class="tempManila" id="temp"></h1>
+    <p class="humidityManila" id="humidity"></p>
+    <p class="windManila" id="wind"></p>
+    <table>
+        <tr>
+            <th><p class="dayforecast1Manila" id="days"></p></th>
+            <th><p class="dayforecast2Manila" id="days"></p></th>
+            <th><p class="dayforecast3Manila" id="days"></p></th>
+            <th><p class="dayforecast4Manila" id="days"></p></th>
+        </tr>
+        <tr>
+            <td><p class="maxtempforecast1Manila" id="maxtemp"></p></td>
+            <td><p class="maxtempforecast2Manila" id="maxtemp"></p></td>
+            <td><p class="maxtempforecast3Manila" id="maxtemp"></p></td>
+            <td><p class="maxtempforecast4Manila" id="maxtemp"></p></td>
+        </tr>
+        <tr>
+            <td><p class="mintempforecast1Manila" id="mintemp"></p></td>
+            <td><p class="mintempforecast2Manila" id="mintemp"></p></td>
+            <td><p class="mintempforecast3Manila" id="mintemp"></p></td>
+            <td><p class="mintempforecast4Manila" id="mintemp"></p></td>
+        </tr>
+    </table>
+
+    <h2 class="cityStockholm" id="city"></h2>
+    <h1 class="tempStockholm" id="temp"></h1>
+    <p class="humidityStockholm" id="humidity"></p>
+    <p class="windStockholm" id="wind"></p>
+    <table>
+        <tr>
+            <th><p class="dayforecast1Stockholm" id="days"></p></th>
+            <th><p class="dayforecast2Stockholm" id="days"></p></th>
+            <th><p class="dayforecast3Stockholm" id="days"></p></th>
+            <th><p class="dayforecast4Stockholm" id="days"></p></th>
+        </tr>
+        <tr>
+            <td><p class="maxtempforecast1Stockholm" id="maxtemp"></p></td>
+            <td><p class="maxtempforecast2Stockholm" id="maxtemp"></p></td>
+            <td><p class="maxtempforecast3Stockholm" id="maxtemp"></p></td>
+            <td><p class="maxtempforecast4Stockholm" id="maxtemp"></p></td>
+        </tr>
+        <tr>
+            <td><p class="mintempforecast1Stockholm" id="mintemp"></p></td>
+            <td><p class="mintempforecast2Stockholm" id="mintemp"></p></td>
+            <td><p class="mintempforecast3Stockholm" id="mintemp"></p></td>
+            <td><p class="mintempforecast4Stockholm" id="mintemp"></p></td>
+        </tr>
+    </table>
+
+    <h2 class="cityKyiv" id="city"></h2>
+    <h1 class="tempKyiv" id="temp"></h1>
+    <p class="humidityKyiv" id="humidity"></p>
+    <p class="windKyiv" id="wind"></p>
+    <table>
+        <tr>
+            <th><p class="dayforecast1Kyiv" id="days"></p></th>
+            <th><p class="dayforecast2Kyiv" id="days"></p></th>
+            <th><p class="dayforecast3Kyiv" id="days"></p></th>
+            <th><p class="dayforecast4Kyiv" id="days"></p></th>
+        </tr>
+        <tr>
+            <td><p class="maxtempforecast1Kyiv" id="maxtemp"></p></td>
+            <td><p class="maxtempforecast2Kyiv" id="maxtemp"></p></td>
+            <td><p class="maxtempforecast3Kyiv" id="maxtemp"></p></td>
+            <td><p class="maxtempforecast4Kyiv" id="maxtemp"></p></td>
+        </tr>
+        <tr>
+            <td><p class="mintempforecast1Kyiv" id="mintemp"></p></td>
+            <td><p class="mintempforecast2Kyiv" id="mintemp"></p></td>
+            <td><p class="mintempforecast3Kyiv" id="mintemp"></p></td>
+            <td><p class="mintempforecast4Kyiv" id="mintemp"></p></td>
+        </tr>
+    </table>
+
+    <h2 class="cityDamascus" id="city"></h2>
+    <h1 class="tempDamascus" id="temp"></h1>
+    <p class="humidityDamascus" id="humidity"></p>
+    <p class="windDamascus" id="wind"></p>
+    <table>
+        <tr>
+            <th><p class="dayforecast1Damascus" id="days"></p></th>
+            <th><p class="dayforecast2Damascus" id="days"></p></th>
+            <th><p class="dayforecast3Damascus" id="days"></p></th>
+            <th><p class="dayforecast4Damascus" id="days"></p></th>
+        </tr>
+        <tr>
+            <td><p class="maxtempforecast1Damascus" id="maxtemp"></p></td>
+            <td><p class="maxtempforecast2Damascus" id="maxtemp"></p></td>
+            <td><p class="maxtempforecast3Damascus" id="maxtemp"></p></td>
+            <td><p class="maxtempforecast4Damascus" id="maxtemp"></p></td>
+        </tr>
+        <tr>
+            <td><p class="mintempforecast1Damascus" id="mintemp"></p></td>
+            <td><p class="mintempforecast2Damascus" id="mintemp"></p></td>
+            <td><p class="mintempforecast3Damascus" id="mintemp"></p></td>
+            <td><p class="mintempforecast4Damascus" id="mintemp"></p></td>
+        </tr>
+    </table>
 
 </body>
 

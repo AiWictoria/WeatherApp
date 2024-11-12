@@ -117,7 +117,7 @@ async function checkWeatherManila(){
         document.querySelector(".dayforecast1Kyiv").innerHTML = day1;
         document.querySelector(".dayforecast2Kyiv").innerHTML = day2;
         document.querySelector(".dayforecast3Kyiv").innerHTML = day3;
-        document.querySelector(".dayforecast4SKyiv").innerHTML = day4;
+        document.querySelector(".dayforecast4Kyiv").innerHTML = day4;
 
     }
 
