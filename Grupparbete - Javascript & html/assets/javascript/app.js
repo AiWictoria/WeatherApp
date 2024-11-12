@@ -111,8 +111,21 @@ async function checkWeatherManila(){
         var data = await response.json();
         
         console.log(data);
-    }
 
+        document.querySelector(".cityDamascus").innerHTML = data.location.name;
+        document.querySelector(".tempDamascus").innerHTML = Math.round(data.current.temp_c) + "°C";
+        document.querySelector(".humidityDamascus").innerHTML = "Humidity: " + data.current.humidity + "%";
+        document.querySelector(".windDamascus").innerHTML = "Wind speed: " + data.current.wind_kph + " km/h";
+        document.querySelector(".mintempforecast1Damascus").innerHTML = Math.round(data.forecast.forecastday[1].day.mintemp_c) + "°C";
+        document.querySelector(".maxtempforecast1Damascus").innerHTML = Math.round(data.forecast.forecastday[1].day.maxtemp_c) + "°C";
+        document.querySelector(".mintempforecast2Damascus").innerHTML = Math.round(data.forecast.forecastday[2].day.mintemp_c) + "°C";
+        document.querySelector(".maxtempforecast2Damascus").innerHTML = Math.round(data.forecast.forecastday[2].day.maxtemp_c) + "°C";
+        document.querySelector(".mintempforecast3Damascus").innerHTML = Math.round(data.forecast.forecastday[3].day.mintemp_c) + "°C";
+        document.querySelector(".maxtempforecast3Damascus").innerHTML = Math.round(data.forecast.forecastday[3].day.maxtemp_c) + "°C";
+        document.querySelector(".mintempforecast4Damascus").innerHTML = Math.round(data.forecast.forecastday[4].day.mintemp_c) + "°C";
+        document.querySelector(".maxtempforecast4Damascus").innerHTML = Math.round(data.forecast.forecastday[4].day.maxtemp_c) + "°C";
+    }
+checkWeatherDamascus();
 checkWeatherKyiv();
 checkWeatherManila();
 checkWeatherStockholm()
