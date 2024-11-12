@@ -104,6 +104,15 @@ async function checkWeatherManila(){
 
     }
 
+    async function checkWeatherDamascus(){
+        const response = await fetch(apiUrlDamascus);
+        
+        
+        var data = await response.json();
+        
+        console.log(data);
+    }
+
 checkWeatherKyiv();
 checkWeatherManila();
 checkWeatherStockholm()
