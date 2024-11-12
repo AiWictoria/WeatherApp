@@ -5,7 +5,7 @@
 #temp{
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(254, 223, 21);
-    text-shadow: rgb(231, 238, 21) 1px 0 10px; 
+    -webkit-text-stroke: 1px black;
 }
 
 #humidity{
@@ -20,7 +20,7 @@
 
 #days{
     font-family: Arial, Helvetica, sans-serif;
-    color: green;
+    color: rgb(195, 0, 0);
 }
 
 #maxtemp{
@@ -30,5 +30,5 @@
 
 #mintemp{
     font-family: Arial, Helvetica, sans-serif;
-    color: #8a8a8a;
+    color: #b3b3b3;
 }
