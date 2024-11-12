@@ -89,7 +89,21 @@ async function checkWeatherManila(){
         
         console.log(data);
 
+        document.querySelector(".cityKyiv").innerHTML = data.location.name;
+        document.querySelector(".tempKyiv").innerHTML = Math.round(data.current.temp_c) + "°C";
+        document.querySelector(".humidityKyiv").innerHTML = "Humidity: " + data.current.humidity + "%";
+        document.querySelector(".windKyiv").innerHTML = "Wind speed: " + data.current.wind_kph + " km/h";
+        document.querySelector(".mintempforecast1Kyiv").innerHTML = Math.round(data.forecast.forecastday[1].day.mintemp_c) + "°C";
+        document.querySelector(".maxtempforecast1Kyiv").innerHTML = Math.round(data.forecast.forecastday[1].day.maxtemp_c) + "°C";
+        document.querySelector(".mintempforecast2Kyiv").innerHTML = Math.round(data.forecast.forecastday[2].day.mintemp_c) + "°C";
+        document.querySelector(".maxtempforecast2Kyiv").innerHTML = Math.round(data.forecast.forecastday[2].day.maxtemp_c) + "°C";
+        document.querySelector(".mintempforecast3Kyiv").innerHTML = Math.round(data.forecast.forecastday[3].day.mintemp_c) + "°C";
+        document.querySelector(".maxtempforecast3Kyiv").innerHTML = Math.round(data.forecast.forecastday[3].day.maxtemp_c) + "°C";
+        document.querySelector(".mintempforecast4Kyiv").innerHTML = Math.round(data.forecast.forecastday[4].day.mintemp_c) + "°C";
+        document.querySelector(".maxtempforecast4Kyiv").innerHTML = Math.round(data.forecast.forecastday[4].day.maxtemp_c) + "°C";
+
     }
 
+checkWeatherKyiv();
 checkWeatherManila();
 checkWeatherStockholm()
