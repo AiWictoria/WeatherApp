@@ -1,5 +1,5 @@
 const apiUrlManila = "http://api.weatherapi.com/v1/forecast.json?key=70923cd2adb646fc90190851240711&q=Manila&days=5&aqi=no&alerts=no";
-const apiIrlStockholm = "http://api.weatherapi.com/v1/forecast.json?key=70923cd2adb646fc90190851240711&q=Stockholm&days=5&aqi=no&alerts=no";
+const apiUrlStockholm = "http://api.weatherapi.com/v1/forecast.json?key=70923cd2adb646fc90190851240711&q=Stockholm&days=5&aqi=no&alerts=no";
 const apiUrlKyiv = "http://api.weatherapi.com/v1/forecast.json?key=70923cd2adb646fc90190851240711&q=Kyiv&days=5&aqi=no&alerts=no";
 const apiUrlDamascus = "http://api.weatherapi.com/v1/forecast.json?key=70923cd2adb646fc90190851240711&q=Damascus&days=5&aqi=no&alerts=no";
 
@@ -62,6 +62,33 @@ async function checkWeatherManila(){
         document.querySelector(".maxtempforecast3Stockholm").innerHTML = Math.round(data.forecast.forecastday[3].day.maxtemp_c) + "°C";
         document.querySelector(".mintempforecast4Stockholm").innerHTML = Math.round(data.forecast.forecastday[4].day.mintemp_c) + "°C";
         document.querySelector(".maxtempforecast4Stockholm").innerHTML = Math.round(data.forecast.forecastday[4].day.maxtemp_c) + "°C";
+
+        const weekday = ["Söndag", "Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag"];
+    
+        const d1 = new Date(data.forecast.forecastday[1].date);
+        const d2 = new Date(data.forecast.forecastday[2].date);
+        const d3 = new Date(data.forecast.forecastday[3].date);
+        const d4 = new Date(data.forecast.forecastday[4].date);
+
+        let day1 = weekday[d1.getDay()];
+        let day2 = weekday[d2.getDay()];
+        let day3 = weekday[d3.getDay()];
+        let day4 = weekday[d4.getDay()];
+
+        document.querySelector(".dayforecast1Stockholm").innerHTML = day1;
+        document.querySelector(".dayforecast2Stockholm").innerHTML = day2;
+        document.querySelector(".dayforecast3Stockholm").innerHTML = day3;
+        document.querySelector(".dayforecast4Stockholm").innerHTML = day4;
+    }
+
+    async function checkWeatherKyiv(){
+        const response = await fetch(apiUrlKyiv);
+        
+        
+        var data = await response.json();
+        
+        console.log(data);
+
     }
 
 checkWeatherManila();
