@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="author" content="Linda, Johan, Viktoria & Evelina"> <!-- Skaparen av hemsidan-->
     <meta name="viewport" content="width=device-width", initial-scale="1.0">
-    <link rel="stylesheet" href="assets/css/main.css" type="text/css">
-    <link rel="icon" type="image/x-icon" href="assets/images/logo.png"> <!--Hemsidans logga-->
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <link rel="icon" type="image/x-icon" href="logo.png"> <!--Hemsidans logga-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" 
     rel="stylesheet">
@@ -14,22 +14,30 @@
 
 <body>
     <header>
-        <a href="index.html" class="logo"><img src="assets/images/logo.png" width="40" alt="Logo"></a> <!--Navigationbarens loggan-->
+        <a href="index.html" class="logo"><img src="logo.png" width="40" alt="Logo"></a> <!--Navigationbarens loggan-->
         <h1>JLW-eather</h1>
-        <div class="city-buttons">
-            <button onclick="getWeather('Stockholm')">Stockholm</button>
-            <button onclick="getWeather('Kyiv')">Kyiv</button>
-            <button onclick="getWeather('Damascus')">Damascus</button>
-            <button onclick="getWeather('Manila')">Manila</button>
-            <button onclick="getWeather('Baghdad')">Baghdad</button>
-        </div>
+        
+    <div class="city-buttons">
+        <input type="radio" name="city" id="stockholm" hidden>
+        <label for="stockholm">Stockholm</label>
+    
+        <input type="radio" name="city" id="kyiv" hidden>
+        <label for="kyiv">Kyiv</label>
+    
+        <input type="radio" name="city" id="damascus" hidden>
+        <label for="damascus">Damascus</label>
+    
+        <input type="radio" name="city" id="manila" hidden>
+        <label for="manila">Manila</label>
+    </div>
+    
     </header>
 
     <main>
         <div id="current-weather" class="current-weather">
             <h2>Now:</h2>
-            <div id="current-weather-info">
-            </div>
+            <p></p>
+            <div id="current-weather-info"></div>
         </div>
 
         <div id="forecast" class="forecast">
@@ -39,12 +47,10 @@
     </main>
 
     <footer>
-        <button onclick="switchToLightTheme()">Normal Theme</button>
-        <button onclick="switchToSwedishTheme()">Swedish Theme</button>
         <p>&copy; 2024 JLW-eather. Alla rättigheter förbehållna.</p>
     </footer>
 
-    <script src="assets/javascript/app.js" defer></script>
+    <script src="assets/javascript/app.js"></script>
 
 </body>
 

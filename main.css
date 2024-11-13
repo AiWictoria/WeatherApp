@@ -1,0 +1,103 @@
+:root { 
+    --clr-text: white;
+    --clr-heading: white;
+    --clr-border: rgba(255, 255, 255, 0.744);
+    --clr-background-header: rgba(145, 143, 143, 0.311);
+    --clr-button-bg: rgba(255, 255, 255, 0.32);
+    --clr-button-hover: rgba(224, 224, 224, 0.884);
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.338),rgba(0, 0, 0, 0.696)),url(bakgrund.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: "Raleway", sans-serif;
+    color: var(--clr-text);
+}
+header {
+    text-align: center;
+    padding: 20px;
+    color: var(--clr-text);
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.886); 
+    border-radius: 8px;
+}
+.city-buttons {
+    margin-top: 15px;
+}
+.city-buttons label {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid var(--clr-border);
+    cursor: pointer;
+    background-color: var(--clr-button-bg);
+    color: var(--clr-text);
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    font-family: "Raleway", sans-serif;
+}
+.city-buttons label:hover {
+    background-color: var(--clr-button-hover);
+}
+main {
+display: flex;
+justify-content: center;
+width: 100%;
+max-width: 800px;
+margin-top: 20px;
+color: var(--clr-text);
+font-family: "Raleway", sans-serif;
+}
+.current-weather {
+    text-align: center;
+    padding: 20px;
+    width: 45%;
+    max-width: 600px;
+    background-color: rgba(145, 143, 143, 0.311);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid var(--clr-border);
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.3s;
+}
+.forecast{
+    text-align: center;
+    padding: 20px;
+    width: 45%;
+    max-width: 600px;
+    background-color: rgba(145, 143, 143, 0.311);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid var(--clr-border);
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.3s;
+}
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: transparent;
+    color: var(--clr-text);
+    margin-top: 20px;
+    font-size: 14px;
+}
+footer p {
+    display: inline;
+    margin-right: 15px;
+}
