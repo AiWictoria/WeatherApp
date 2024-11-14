@@ -37,12 +37,13 @@
                         <div class="degree-box">
                             <div class="d-flex justify-content-between">
                                 <div class="d-flex flex-column mb-3 degree-box ">
-
-                                    <div class="d-flex flex-row mb-3">
-                                        <div id="temp-div1"></div>
-                                    </div>
-                                    <div class="d-flex justify-content-start">
-                                        <div id="weather-info1"></div>
+                                    <div class="transparent-box">
+                                        <div class="d-flex flex-row mb-3">
+                                            <div id="temp-div1"></div>
+                                        </div>
+                                        <div class="d-flex justify-content-start">
+                                            <div id="weather-info1"></div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="city-font">
@@ -55,47 +56,24 @@
                 </div>
                 <div class="forcast-land-1 forcast-box">
                     <div id="hourly-forecast1"></div>
-                </section>
-                <section class="land-2 land-box">
-                    <div class="d-flex justify-content-between">
-                        <div class="d-flex flex-column mb-3 degree-box ">
-                            <div class="d-flex flex-row mb-3">
-                                <div id="temp-div2"></div>
                 </div>
+            
                 <div class="land-2 land-box" id="degree-box2">
                     <div class="degree-box">
                         <div class="d-flex justify-content-between">
                             <div class="d-flex flex-column mb-3 degree-box">
                                 <div class="d-flex flex-row mb-3">
                                     <div id="temp-div2"></div>
-                                    <select name="city" onchange="getWeather(this.value, 'temp-div2', 'city-div2', 'weather-info2', 'weather-icon2', 'hourly-forecast2', 'degree-box2')">
-                                        <option value="stockholm">Stockholm</option>
-                                        <option value="kyiv">Kyiv</option>
-                                        <option value="damascus">Damascus</option>
-                                        <option value="manila">Manila</option>
-                                    </select>
                                 </div>
                                 <div class="d-flex justify-content-start">
                                     <div id="weather-info2"></div>
                                 </div>
                             </div>
+                            
                             <div class="city-font">
                                 <div id="city-div2"></div>
                                 <img src="#" id="weather-icon2" alt="Weather Icon">
                             </div>
-                        </div>
-                        <div id="selectboxpos">
-                            <select name="city" onchange="getWeather(this.value, 'temp-div2', 'city-div2', 'weather-info2', 'weather-icon2', 'hourly-forecast2')" id="selectbox">
-                                <option value="stockholm">Stockholm</option>
-                                <option value="kyiv">Kyiv</option>
-                                <option value="damascus">Damascus</option>
-                                <option value="manila">Manila</option>
-                            </select>
-                        </div>
-                        <div class="city-font">
-                            <div id="city-div2"></div>
-
-                            <img id="weather-icon2" alt="Weather Icon">
                         </div>
                     </div>
                 </div>
@@ -110,10 +88,21 @@
                 <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960"><path d="M479.96-116.41q-151.48 0-257.51-106.04-106.04-106.03-106.04-257.51 0-151.47 106.05-257.67Q328.51-843.83 480-843.83q13.28 0 26.3.88 13.03.88 25.55 2.88-38.13 29.96-61.08 75.15-22.94 45.18-22.94 97.27 0 91.69 64.32 155.88 64.33 64.18 156.22 64.18 52.61 0 97.41-22.82 44.81-22.83 74.52-60.96 1.77 12.52 2.65 25.23.88 12.72.88 25.9 0 151.44-106.2 257.63-106.2 106.2-257.67 106.2Z" /></svg>
                 <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM205.5-434.5h-171v-91h171v91Zm720 0h-171v-91h171v91Zm-491-320v-171h91v171h-91Zm0 720v-171h91v171h-91ZM255.76-641.87 147.35-746.52l64.41-67.13 104.13 107.17-60.13 64.61Zm492.48 495.52L643.11-254.52 704-317.65l108.65 104.17-64.41 67.13ZM642.35-704l104.17-108.65 67.13 64.41-107.17 104.13L642.35-704Zm-496 492.24 108.17-105.13L317.65-256 213.48-147.35l-67.13-64.41Z" /></svg>
             </button>
+
             <p>© JLW-eather 2024. Alla rättigheter förbehållna. </p>
-            <button id="2lands" onclick="landChange()" class="compare-switch">
-                <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960"><path d="M280-120 80-320l200-200 57 56-104 104h607v80H233l104 104-57 56Zm400-320-57-56 104-104H120v-80h607L623-784l57-56 200 200-200 200Z" /></svg>
-            </button>
+            <div class="d-flex justify-content-end">
+                <div class="selectboxpos">
+                    <select name="city" onchange="getWeather(this.value, 'temp-div2', 'city-div2', 'weather-info2', 'weather-icon2', 'hourly-forecast2',  'degree-box2')" id="selectbox">
+                        <option value="stockholm">Stockholm</option>
+                        <option value="kyiv">Kyiv</option>
+                        <option value="damascus">Damascus</option>
+                        <option value="manila">Manila</option>
+                    </select>
+                </div>
+                <button id="2lands" onclick="landChange()" class="compare-switch">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960"><path d="M280-120 80-320l200-200 57 56-104 104h607v80H233l104 104-57 56Zm400-320-57-56 104-104H120v-80h607L623-784l57-56 200 200-200 200Z" /></svg>
+                </button>
+            </div>
         </footer>
     </div>
 </body>
