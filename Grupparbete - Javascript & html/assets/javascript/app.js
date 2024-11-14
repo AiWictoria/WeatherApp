@@ -1,4 +1,4 @@
-function getWeather(city, div1, div2, div3, div4, div5) {
+function getWeather(city, div1, div2, div3, div4, div5, div6) {
     const apiKey = '915785edc646f59382234676c1139aab';
 
     const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
@@ -7,7 +7,7 @@ function getWeather(city, div1, div2, div3, div4, div5) {
     fetch(currentWeatherUrl)
         .then(response => response.json())
         .then(data => {
-            displayWeather(data, div1, div2, div3, div4, div5);
+            displayWeather(data, div1, div2, div3, div4, div5, div6);
         })
         .catch(error => {
             console.error('Error fetching current weather data', error);
@@ -25,17 +25,19 @@ function getWeather(city, div1, div2, div3, div4, div5) {
         });
 }
 
-function displayWeather(data, div1, div2, div3, div4, div5) {
-    console.log(data); 
+function displayWeather(data, div1, div2, div3, div4, div5, div6) {
     const tempDivInfo = document.getElementById(div1);
     const cityDivInfo = document.getElementById(div2);
     const weatherInfoDiv = document.getElementById(div3);
     const weatherIcon = document.getElementById(div4);
     const hourlyForecastDiv = document.getElementById(div5);
+    const degreeBox = document.getElementById(div6);
 
     weatherInfoDiv.innerHTML = '';
     hourlyForecastDiv.innerHTML = '';
     tempDivInfo.innerHTML = '';
+
+    degreeBox.style.backgroundImage = '';
 
     if (data.cod === 404) { 
         weatherInfoDiv.innerHTML = `<p>${data.message}</p>`;
@@ -54,7 +56,20 @@ function displayWeather(data, div1, div2, div3, div4, div5) {
         weatherInfoDiv.innerHTML = weatherHTML;
         weatherIcon.src = iconUrl;
         weatherIcon.alt = description;
+        weatherIcon.style.display = 'block';
 
+        if (cityName.toLowerCase() === 'stockholm') {
+            degreeBox.style.backgroundImage = 'url("images/swe.png"), linear-gradient(to bottom, var(--darkblue-color), var(--lightblue-color), var(--beige-color))';
+        }
+        if (cityName.toLowerCase() === 'kyiv') {
+            degreeBox.style.backgroundImage = 'url("images/ukraina.png"), linear-gradient(to bottom, var(--darkblue-color), var(--lightblue-color), var(--beige-color))';
+        }
+        if (cityName.toLowerCase() === 'damascus') {
+            degreeBox.style.backgroundImage = 'url("images/syrien.png"), linear-gradient(to bottom, var(--darkblue-color), var(--lightblue-color), var(--beige-color))';
+        }
+        if (cityName.toLowerCase() === 'manila') {
+            degreeBox.style.backgroundImage = 'url("images/phi.png"), linear-gradient(to bottom, var(--darkblue-color), var(--lightblue-color), var(--beige-color))';
+        }
         showImage(div4);
     }
 }
