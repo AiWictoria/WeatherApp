@@ -26,16 +26,18 @@ function getWeather(city, div1, div2, div3, div4, div5) {
 }
 
 function displayWeather(data, div1, div2, div3, div4, div5) {
-    console.log(data); 
     const tempDivInfo = document.getElementById(div1);
     const cityDivInfo = document.getElementById(div2);
     const weatherInfoDiv = document.getElementById(div3);
     const weatherIcon = document.getElementById(div4);
     const hourlyForecastDiv = document.getElementById(div5);
+    const degreeBox = document.getElementById('degree-box');
 
     weatherInfoDiv.innerHTML = '';
     hourlyForecastDiv.innerHTML = '';
     tempDivInfo.innerHTML = '';
+
+    degreeBox.style.backgroundImage = '';
 
     if (data.cod === 404) { 
         weatherInfoDiv.innerHTML = `<p>${data.message}</p>`;
@@ -54,7 +56,26 @@ function displayWeather(data, div1, div2, div3, div4, div5) {
         weatherInfoDiv.innerHTML = weatherHTML;
         weatherIcon.src = iconUrl;
         weatherIcon.alt = description;
+        weatherIcon.style.display = 'block';
 
+        if (cityName.toLowerCase() === 'stockholm') {
+            degreeBox.style.backgroundImage = 'url("images/swe.png")'; 
+            degreeBox.style.backgroundPosition = 'center center';
+        }
+
+        if (cityName.toLowerCase() === 'kyiv') {
+            degreeBox.style.backgroundImage = 'url("images/ukraina.png"';
+            degreeBox.style.backgroundPosition = 'center center';
+        }
+      
+        if (cityName.toLowerCase() === 'damascus') {
+            degreeBox.style.backgroundImage = 'url("images/syrien.png"';
+            degreeBox.style.backgroundPosition = 'center center';
+        }
+        if (cityName.toLowerCase() === 'manila') {
+            degreeBox.style.backgroundImage = 'url("images/phi.png"';
+            degreeBox.style.backgroundPosition = 'center center';
+        }
         showImage(div4);
     }
 }
