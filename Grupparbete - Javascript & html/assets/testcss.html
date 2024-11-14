@@ -20,7 +20,7 @@
             <header>
                 <div class="d-flex flex-column mb-3">
                     <div class="d-flex justify-content-around">
-                        <button onclick="getWeather('stockholm', 'temp-div1','city-div1','weather-info1', 'weather-icon1', 'hourly-forecast1', 'degree-box1')" class="menu-button">Stockholm</button>
+                        <button onclick="getWeather('stockholm', 'temp-div1','city-div1','weather-info1', 'weather-icon1', 'hourly-forecast1','degree-box1')" class="menu-button">Stockholm</button>
                         <button onclick="getWeather('kyiv', 'temp-div1', 'city-div1','weather-info1', 'weather-icon1', 'hourly-forecast1', 'degree-box1')" class="menu-button">Kyiv</button>
                         <button onclick="getWeather('damascus', 'temp-div1', 'city-div1','weather-info1', 'weather-icon1', 'hourly-forecast1', 'degree-box1')" class="menu-button">Damascus</button>
                         <button onclick="getWeather('manila','temp-div1', 'city-div1','weather-info1', 'weather-icon1', 'hourly-forecast1', 'degree-box1')" class="menu-button">Manila</button>
@@ -32,32 +32,32 @@
         </div>
         <main>
             <div class="inner-container">
-                <section class="land-1 land-box">
-                    <div class="degree-box" id="degree-box1">
+                <div  class="land-1 land-box" id="degree-box1">
+                    <section>
+                        <div class="degree-box">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-column mb-3 degree-box ">
 
-                    <div class="d-flex justify-content-between">
-                        <div class="d-flex flex-column mb-3 degree-box ">
-                                                           
-                            <div class="d-flex flex-row mb-3">
-                                <div id="temp-div1"></div>
-                            </div>
-                            <div class="d-flex justify-content-start">
-                                <div id="weather-info1"></div>
+                                    <div class="d-flex flex-row mb-3">
+                                        <div id="temp-div1"></div>
+                                    </div>
+                                    <div class="d-flex justify-content-start">
+                                        <div id="weather-info1"></div>
+                                    </div>
+                                </div>
+                                <div class="city-font">
+                                    <div id="city-div1"></div>
+                                    <img id="weather-icon1" alt="Weather Icon">
+                                </div>
                             </div>
                         </div>
-                        <div class="city-font">
-                            <div id="city-div1"></div>
-                            <img id="weather-icon1" alt="Weather Icon">
-                        </div>
-                    </div>
+                    </section>
                 </div>
-
-                </section>
                 <section class="forcast-land-1 forcast-box">
                     <div id="hourly-forecast1"></div>
                 </section>
-                <section class="land-2 land-box">
-                    <div class="degree-box" id="degree-box2">
+                <section class="land-2 land-box" id="degree-box2">
+                    <div class="degree-box">
                         <div class="d-flex justify-content-between">
                             <div class="d-flex flex-column mb-3 degree-box">
                                 <div class="d-flex flex-row mb-3">

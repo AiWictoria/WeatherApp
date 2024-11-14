@@ -19,10 +19,10 @@
 body {
     background: linear-gradient(44deg,var( --darkblue-color ), var(--beige-color) 50%, var( --darkblue-color ));
     margin: 0;
+    height: 100%;
 }
 .outer-container {
     display: grid;
-    height: 100vh;
     grid-template-areas:
         "header"
         "main"
@@ -32,7 +32,7 @@ body {
 
 header {
     grid-area: header;
-    height: 9rem;
+    height: 8.5rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -50,7 +50,11 @@ main {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
-    height: 90%;
+}
+.inner-container.compare {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 
 footer {
@@ -71,6 +75,7 @@ footer p{
     background: linear-gradient(to bottom, var(--darkblue-color), var(--lightblue-color), var(--beige-color));
     grid-area: 1 / 1 / 3 / 2;
     margin: 0.9375rem;
+    min-height: 74vh;
 }
 
 .forcast-land-1 {
@@ -79,6 +84,7 @@ footer p{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    min-height: 74vh;
 }
 
 .forcast-land-2 {
@@ -100,6 +106,8 @@ footer p{
 
 .forcast-land-1.compare {
     grid-area: 2 / 1 / 3 / 2;
+    min-height: 18rem;
+    max-height: 24rem;
 }
 
 
@@ -110,14 +118,17 @@ footer p{
     .land-2.compare,
     .forcast-land-2.compare {
         display: block;
+        min-height: 18rem;
+        max-height: 24rem;
     }
 
     .forcast-land-2.compare {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        min-height: 18rem;
+        max-height: 24rem;
     }
-
 .land-box {
     border-radius: 1.7em;
     box-shadow: inset 0 0 1.25rem var(--shadow-bg), 0 0 0.94rem var(--shadow-bg);
@@ -132,7 +143,10 @@ footer p{
         margin: 1rem;
         margin-bottom: 0;
         box-shadow: inset 0 0 0.625rem var(--shadow-bg), 0 -0.19rem 0.94rem var(--shadow-bg);
+        min-height: 22rem;
+        max-height: 20rem;
     }
+
 
 /**********************************************************************************************************/
 /********************************************* MENU BUTTONS ***********************************************/
@@ -210,16 +224,26 @@ footer p{
 /************************************************ DEGREE BOX **********************************************/
 .degree-box {
     position: relative;
-    width: 100%;
-    min-height: 300px;
-    padding: 2rem;
+    height: fit-content;
+    padding: 1rem;
     margin-left: 0rem;
-    background-size: 100% auto; 
-    background-position: center bottom;
-    background-repeat: no-repeat;
     border-radius: 1.5rem;
     overflow: hidden;
-
+    max-height: 20rem;
+}
+#degree-box1 {
+    position: relative;
+    height: fit-content;
+    background-size: 100% auto;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+#degree-box2 {
+    position: relative;
+    height: fit-content;
+    background-size: 100% auto;
+    background-position: bottom;
+    background-repeat: no-repeat;
 }
     .degree-box h2, .degree-box h3, .degree-box h4 {
         padding: 0.5rem;
@@ -228,7 +252,7 @@ footer p{
 
     .degree-box h2 {
         opacity: 90%;
-        font-size: 8rem;
+        font-size: 7rem;
         font-weight: 750;
     }
 
@@ -247,11 +271,11 @@ footer p{
         text-transform: uppercase;
     }
 .city-font {
-    padding: 2rem;
+    padding: 1rem;
 }
 
     .city-font h2 {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
         opacity: 90%;
         font-weight: 700;
         margin-right: 2rem;
@@ -286,7 +310,7 @@ footer p{
     }
     .forcast-box.compare h2 {
         font-size: 2.5rem;
-        padding-bottom: 0.5rem;
+        padding-bottom: 0.3rem;
     }
 
     .forcast-box h3 {
@@ -306,7 +330,7 @@ footer p{
     }
 
 .forcast-item {
-    padding: 1rem;
+    padding: 0.3rem;
     font-size: 1.5rem;
     margin-right: 6rem;
     margin-bottom: 0.5rem;

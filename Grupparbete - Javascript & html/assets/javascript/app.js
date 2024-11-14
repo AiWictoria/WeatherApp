@@ -59,22 +59,16 @@ function displayWeather(data, div1, div2, div3, div4, div5, div6) {
         weatherIcon.style.display = 'block';
 
         if (cityName.toLowerCase() === 'stockholm') {
-            degreeBox.style.backgroundImage = 'url("images/swe.png")'; 
-            degreeBox.style.backgroundPosition = 'center center';
+            degreeBox.style.backgroundImage = 'url("images/swe.png"), linear-gradient(to bottom, var(--darkblue-color), var(--lightblue-color), var(--beige-color))';
         }
-
         if (cityName.toLowerCase() === 'kyiv') {
-            degreeBox.style.backgroundImage = 'url("images/ukraina.png"';
-            degreeBox.style.backgroundPosition = 'center center';
+            degreeBox.style.backgroundImage = 'url("images/ukraina.png"), linear-gradient(to bottom, var(--darkblue-color), var(--lightblue-color), var(--beige-color))';
         }
-      
         if (cityName.toLowerCase() === 'damascus') {
-            degreeBox.style.backgroundImage = 'url("images/syrien.png"';
-            degreeBox.style.backgroundPosition = 'center center';
+            degreeBox.style.backgroundImage = 'url("images/syrien.png"), linear-gradient(to bottom, var(--darkblue-color), var(--lightblue-color), var(--beige-color))';
         }
         if (cityName.toLowerCase() === 'manila') {
-            degreeBox.style.backgroundImage = 'url("images/phi.png"';
-            degreeBox.style.backgroundPosition = 'center center';
+            degreeBox.style.backgroundImage = 'url("images/phi.png"), linear-gradient(to bottom, var(--darkblue-color), var(--lightblue-color), var(--beige-color))';
         }
         showImage(div4);
     }
