@@ -25,17 +25,20 @@ function getWeather(city, div1, div2, div3) {
         });
 }
 
-function displayWeather(data, div1, div2, div3) {
+function displayWeather(data, div1, div2, div3, city) {
     console.log(data); 
     const tempDivInfo = document.getElementById(div1);
     const cityDivInfo = document.getElementById(div2);
     const weatherInfoDiv = document.getElementById(div3);
     const weatherIcon = document.getElementById('weather-icon');
     const hourlyForecastDiv = document.getElementById('hourly-forecast');
+    const degreeBox = document.getElementById('degree-box');
 
     weatherInfoDiv.innerHTML = '';
     hourlyForecastDiv.innerHTML = '';
     tempDivInfo.innerHTML = '';
+
+    degreeBox.style.backgroundImage = '';
 
     if (data.cod === 404) { 
         weatherInfoDiv.innerHTML = `<p>${data.message}</p>`;
@@ -54,8 +57,26 @@ function displayWeather(data, div1, div2, div3) {
         weatherInfoDiv.innerHTML = weatherHTML;
         weatherIcon.src = iconUrl;
         weatherIcon.alt = description;
+        weatherIcon.style.display = 'block';
 
-        showImage();
+        if (cityName.toLowerCase() === 'stockholm') {
+            degreeBox.style.backgroundImage = 'url("images/swe.png")'; 
+            degreeBox.style.backgroundPosition = 'center center';
+        }
+
+        if (cityName.toLowerCase() === 'kyiv') {
+            degreeBox.style.backgroundImage = 'url("images/ukraina.png"';
+            degreeBox.style.backgroundPosition = 'center center';
+        }
+
+        if (cityName.toLowerCase() === 'damascus') {
+            degreeBox.style.backgroundImage = 'url("images/syrien.png"';
+            degreeBox.style.backgroundPosition = 'center center';
+        }
+        if (cityName.toLowerCase() === 'manila') {
+            degreeBox.style.backgroundImage = 'url("images/phi.png"';
+            degreeBox.style.backgroundPosition = 'center center';
+        }
     }
 }
 
@@ -87,5 +108,7 @@ function displayHourlyForecast(hourlyData) {
 
 function showImage() {
     const weatherIcon = document.getElementById('weather-icon');
-    weatherIcon.style.display = 'block';
+    weatherIcon.style.display = 'block'; {
+
+    }
 }
