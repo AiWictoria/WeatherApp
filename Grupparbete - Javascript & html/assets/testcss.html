@@ -54,16 +54,18 @@
                         <div class="d-flex flex-column mb-3 degree-box ">
                             <div class="d-flex flex-row mb-3">
                                 <div id="temp-div2"></div>
-                                <select name="city" onchange="getWeather(this.value, 'temp-div2', 'city-div2', 'weather-info2', 'weather-icon2', 'hourly-forecast2')">
-                                    <option value="stockholm">Stockholm</option>
-                                    <option value="kyiv">Kyiv</option>
-                                    <option value="damascus">Damascus</option>
-                                    <option value="manila">Manila</option>
-                                </select>
                             </div>
                             <div class="d-flex justify-content-start">
                                 <div id="weather-info2"></div>
                             </div>
+                        </div>
+                        <div id="selectboxpos">
+                            <select name="city" onchange="getWeather(this.value, 'temp-div2', 'city-div2', 'weather-info2', 'weather-icon2', 'hourly-forecast2')" id="selectbox">
+                                <option value="stockholm">Stockholm</option>
+                                <option value="kyiv">Kyiv</option>
+                                <option value="damascus">Damascus</option>
+                                <option value="manila">Manila</option>
+                            </select>
                         </div>
                         <div class="city-font">
                             <div id="city-div2"></div>
