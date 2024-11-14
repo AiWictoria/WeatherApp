@@ -359,3 +359,15 @@ footer p{
         }
 
 /**********************************************************************************************************/
+/**********************************************************************************************************/
+#selectbox{
+    background-color: var( --lightlaven-color);
+    border-radius: 4px;
+    border-style: none;
+    box-shadow: 1.5px 3px 5px #0000005f;
+    padding: 2px;
+}
+#selectboxpos{
+    margin-left: 0;
+    margin-top: 4%;
+}

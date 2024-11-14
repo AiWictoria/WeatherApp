@@ -55,6 +55,12 @@
                 </div>
                 <div class="forcast-land-1 forcast-box">
                     <div id="hourly-forecast1"></div>
+                </section>
+                <section class="land-2 land-box">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-column mb-3 degree-box ">
+                            <div class="d-flex flex-row mb-3">
+                                <div id="temp-div2"></div>
                 </div>
                 <div class="land-2 land-box" id="degree-box2">
                     <div class="degree-box">
@@ -77,6 +83,19 @@
                                 <div id="city-div2"></div>
                                 <img src="#" id="weather-icon2" alt="Weather Icon">
                             </div>
+                        </div>
+                        <div id="selectboxpos">
+                            <select name="city" onchange="getWeather(this.value, 'temp-div2', 'city-div2', 'weather-info2', 'weather-icon2', 'hourly-forecast2')" id="selectbox">
+                                <option value="stockholm">Stockholm</option>
+                                <option value="kyiv">Kyiv</option>
+                                <option value="damascus">Damascus</option>
+                                <option value="manila">Manila</option>
+                            </select>
+                        </div>
+                        <div class="city-font">
+                            <div id="city-div2"></div>
+
+                            <img id="weather-icon2" alt="Weather Icon">
                         </div>
                     </div>
                 </div>
