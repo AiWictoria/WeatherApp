@@ -1,4 +1,4 @@
-function getWeather(city, div1, div2, div3) {
+function getWeather(city, div1, div2, div3, div4, div5) {
     const apiKey = '915785edc646f59382234676c1139aab';
 
     const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
@@ -7,7 +7,7 @@ function getWeather(city, div1, div2, div3) {
     fetch(currentWeatherUrl)
         .then(response => response.json())
         .then(data => {
-            displayWeather(data, div1, div2, div3);
+            displayWeather(data, div1, div2, div3, div4, div5);
         })
         .catch(error => {
             console.error('Error fetching current weather data', error);
@@ -17,7 +17,7 @@ function getWeather(city, div1, div2, div3) {
     fetch(forecastUrl)
         .then(response => response.json())
         .then(data => {
-            displayHourlyForecast(data.list);
+            displayHourlyForecast(data.list, div5);
         })
         .catch(error => {
             console.error('Error fetching hourly forecast data', error);
@@ -25,13 +25,12 @@ function getWeather(city, div1, div2, div3) {
         });
 }
 
-function displayWeather(data, div1, div2, div3, city) {
-    console.log(data); 
+function displayWeather(data, div1, div2, div3, div4, div5) {
     const tempDivInfo = document.getElementById(div1);
     const cityDivInfo = document.getElementById(div2);
     const weatherInfoDiv = document.getElementById(div3);
-    const weatherIcon = document.getElementById('weather-icon');
-    const hourlyForecastDiv = document.getElementById('hourly-forecast');
+    const weatherIcon = document.getElementById(div4);
+    const hourlyForecastDiv = document.getElementById(div5);
     const degreeBox = document.getElementById('degree-box');
 
     weatherInfoDiv.innerHTML = '';
@@ -68,7 +67,7 @@ function displayWeather(data, div1, div2, div3, city) {
             degreeBox.style.backgroundImage = 'url("images/ukraina.png"';
             degreeBox.style.backgroundPosition = 'center center';
         }
-
+      
         if (cityName.toLowerCase() === 'damascus') {
             degreeBox.style.backgroundImage = 'url("images/syrien.png"';
             degreeBox.style.backgroundPosition = 'center center';
@@ -77,11 +76,12 @@ function displayWeather(data, div1, div2, div3, city) {
             degreeBox.style.backgroundImage = 'url("images/phi.png"';
             degreeBox.style.backgroundPosition = 'center center';
         }
+        showImage(div4);
     }
 }
 
-function displayHourlyForecast(hourlyData) {
-    const hourlyForecastDiv = document.getElementById('hourly-forecast');
+function displayHourlyForecast(hourlyData, div5) {
+    const hourlyForecastDiv = document.getElementById(div5);
     hourlyForecastDiv.innerHTML = ''; 
 
 
@@ -106,9 +106,7 @@ function displayHourlyForecast(hourlyData) {
     });
 }
 
-function showImage() {
-    const weatherIcon = document.getElementById('weather-icon');
-    weatherIcon.style.display = 'block'; {
-
-    }
+function showImage(div4) {
+    const weatherIcon = document.getElementById(div4);
+    weatherIcon.style.display = 'block';
 }

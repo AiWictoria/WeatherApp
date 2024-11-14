@@ -20,10 +20,10 @@
             <header>
                 <div class="d-flex flex-column mb-3">
                     <div class="d-flex justify-content-around">
-                        <button onclick="getWeather('stockholm', 'temp-div1','city-div1','weather-info1')" class="menu-button">Stockholm</button>
-                        <button onclick="getWeather('kyiv', 'temp-div1', 'city-div1','weather-info1')" class="menu-button">Kyiv</button>
-                        <button onclick="getWeather('damascus', 'temp-div1', 'city-div1','weather-info1')" class="menu-button">Damascus</button>
-                        <button onclick="getWeather('manila','temp-div1', 'city-div1','weather-info1')" class="menu-button">Manila</button>
+                        <button onclick="getWeather('stockholm', 'temp-div1','city-div1','weather-info1', 'weather-icon1', 'hourly-forecast1')" class="menu-button">Stockholm</button>
+                        <button onclick="getWeather('kyiv', 'temp-div1', 'city-div1','weather-info1', 'weather-icon1', 'hourly-forecast1')" class="menu-button">Kyiv</button>
+                        <button onclick="getWeather('damascus', 'temp-div1', 'city-div1','weather-info1', 'weather-icon1', 'hourly-forecast1')" class="menu-button">Damascus</button>
+                        <button onclick="getWeather('manila','temp-div1', 'city-div1','weather-info1', 'weather-icon1', 'hourly-forecast1')" class="menu-button">Manila</button>
                     </div>
                 </div>
                 <script src="javascript/app.js"></script>
@@ -45,24 +45,23 @@
                                 <div id="weather-info1"></div>
                             </div>
                         </div>
-                        <div class="city-font">  
-                            <div id="city-div1"> </div>
-                            <img id="weather-icon" alt="Weather Icon">
-                        
+                        <div class="city-font">
+                            <div id="city-div1"></div>
+                            <img id="weather-icon1" alt="Weather Icon">
                         </div>
                     </div>
                 </div>
 
                 </section>
                 <section class="forcast-land-1 forcast-box">
-                  <div id="hourly-forecast"></div>
+                    <div id="hourly-forecast1"></div>
                 </section>
                 <section class="land-2 land-box">
                     <div class="d-flex justify-content-between">
                         <div class="d-flex flex-column mb-3 degree-box ">
                             <div class="d-flex flex-row mb-3">
                                 <div id="temp-div2"></div>
-                                <select name="city" onchange="getWeather(this.value, 'temp-div2', 'city-div2', 'weather-info2')">
+                                <select name="city" onchange="getWeather(this.value, 'temp-div2', 'city-div2', 'weather-info2', 'weather-icon2', 'hourly-forecast2')">
                                     <option value="stockholm">Stockholm</option>
                                     <option value="kyiv">Kyiv</option>
                                     <option value="damascus">Damascus</option>
@@ -75,12 +74,12 @@
                         </div>
                         <div class="city-font">
                             <div id="city-div2"></div>
-                            <img id="weather-icon" alt="Weather Icon">
+                            <img id="weather-icon2" alt="Weather Icon">
                         </div>
                     </div>
                 </section>
                 <section class="forcast-land-2 forcast-box">
-                    <div id="hourly-forecast"></div>
+                    <div id="hourly-forecast2"></div>
                 </section>
             </div>
         </main>
