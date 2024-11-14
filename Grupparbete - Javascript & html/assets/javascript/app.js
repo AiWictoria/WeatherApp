@@ -1,4 +1,4 @@
-function getWeather(city, div1, div2, div3, div4, div5) {
+function getWeather(city, div1, div2, div3, div4, div5, div6) {
     const apiKey = '915785edc646f59382234676c1139aab';
 
     const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
@@ -7,7 +7,7 @@ function getWeather(city, div1, div2, div3, div4, div5) {
     fetch(currentWeatherUrl)
         .then(response => response.json())
         .then(data => {
-            displayWeather(data, div1, div2, div3, div4, div5);
+            displayWeather(data, div1, div2, div3, div4, div5, div6);
         })
         .catch(error => {
             console.error('Error fetching current weather data', error);
@@ -25,13 +25,13 @@ function getWeather(city, div1, div2, div3, div4, div5) {
         });
 }
 
-function displayWeather(data, div1, div2, div3, div4, div5) {
+function displayWeather(data, div1, div2, div3, div4, div5, div6) {
     const tempDivInfo = document.getElementById(div1);
     const cityDivInfo = document.getElementById(div2);
     const weatherInfoDiv = document.getElementById(div3);
     const weatherIcon = document.getElementById(div4);
     const hourlyForecastDiv = document.getElementById(div5);
-    const degreeBox = document.getElementById('degree-box');
+    const degreeBox = document.getElementById(div6);
 
     weatherInfoDiv.innerHTML = '';
     hourlyForecastDiv.innerHTML = '';
