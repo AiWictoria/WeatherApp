@@ -1,5 +1,5 @@
 function getWeather(city, div1, div2, div3, div4, div5, div6) {
-    const apiKey = '915785edc646f59382234676c1139aab';
+    const apiKey = '';
 
     const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
     const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
